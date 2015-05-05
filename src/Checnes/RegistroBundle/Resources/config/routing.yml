@@ -1,0 +1,4 @@
+checnes_registro_usuario:
+    resource: "@ChecnesRegistroBundle/Resources/config/routing/usuario.yml"
+    prefix:   /usuario
+

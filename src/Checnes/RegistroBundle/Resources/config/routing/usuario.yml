@@ -1,0 +1,30 @@
+usuario:
+    path:     /
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:index" }
+
+usuario_show:
+    path:     /{id}/show
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:show" }
+
+usuario_new:
+    path:     /new
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:new" }
+
+usuario_create:
+    path:     /create
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:create" }
+    methods:  POST
+
+usuario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:edit" }
+
+usuario_update:
+    path:     /{id}/update
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:update" }
+    methods:  [POST, PUT]
+
+usuario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ChecnesRegistroBundle:Usuario:delete" }
+    methods:  [POST, DELETE]
