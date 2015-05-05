@@ -82,10 +82,11 @@ class UsuarioController extends Controller
         $entity = new Usuario();
         $form   = $this->createCreateForm($entity);
 
-        return $this->render('ChecnesRegistroBundle:Usuario:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        ));
+        $data['titulo']   = "Usuario - Nuego Registro";
+        $data['entity']   = $entity;
+        $data['form']     = $form->createView();
+
+        return $this->render('ChecnesRegistroBundle:Usuario:new.html.twig', $data);
     }
 
     /**
@@ -127,11 +128,12 @@ class UsuarioController extends Controller
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('ChecnesRegistroBundle:Usuario:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $data['titulo']      = "Usuario - Nuego Registro";
+        $data['entity']      = $entity;
+        $data['edit_form']   = $editForm->createView();
+        $data['delete_form'] = $deleteForm->createView();
+
+        return $this->render('ChecnesRegistroBundle:Usuario:edit.html.twig', $data);
     }
 
     /**
