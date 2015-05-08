@@ -15,21 +15,26 @@ class PersonaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('dni')
+            ->add('dni', 'text', array(
+                'attr'          => array('class' => 'input-small'),
+                'label'         => 'DNI',
+                'max_length'    => '8',
+                'required'      => true,
+            ))
             ->add('nombres')
-            ->add('apellidoPaterno')
-            ->add('apellidoMaterno')
+            ->add('apellido_materno')
+            ->add('apellido_paterno')
             ->add('fecha_nacimiento')
             ->add('email')
-            ->add('telefonoFijo')
-            ->add('telefonoCelular')
+            ->add('telefono_fijo')
+            ->add('telefono_celular')
             ->add('direccion')
             ->add('sexo')
             ->add('estado')
             ->add('condicion')
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

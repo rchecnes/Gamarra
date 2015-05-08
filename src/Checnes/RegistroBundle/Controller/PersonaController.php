@@ -48,10 +48,11 @@ class PersonaController extends Controller
             return $this->redirect($this->generateUrl('persona_show', array('id' => $entity->getId())));
         }
 
-        return $this->render('ChecnesRegistroBundle:Persona:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        ));
+        $data['titulo']   = "Persona";
+        $data['entity']   = $entity;
+        $data['form']     = $form->createView();
+
+        return $this->render('ChecnesRegistroBundle:Persona:new.html.twig', $data);
     }
 
     /**
@@ -105,10 +106,11 @@ class PersonaController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('ChecnesRegistroBundle:Persona:show.html.twig', array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $data['titulo']   = "Persona";
+        $data['entity']   = $entity;
+        $data['delete_form']   = $deleteForm->createView();
+
+        return $this->render('ChecnesRegistroBundle:Persona:show.html.twig', $data);
     }
 
     /**

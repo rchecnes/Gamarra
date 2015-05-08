@@ -1,15 +1,30 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Persona creation</h1>
 
-    {{ form(form) }}
+ <form action="{{ path('persona_create') }}" method="post" {{ form_enctype(form) }} novalidate>
+   <div class="row">
+      <div class="span3">{{ form_row(form.dni) }}</div>
+      <div class="span3">{{ form_row(form.apellido_paterno) }}</div>
+      <div class="span3">{{ form_row(form.apellido_materno) }}</div>
+      <div class="span3">{{ form_row(form.nombres) }}</div>
+   </div>
+   <div class="row">
+      <div class="span3">{{ form_row(form.fecha_nacimiento) }}</div>
+      <div class="span3">{{ form_row(form.email) }}</div>
+      <div class="span3">{{ form_row(form.telefono_fijo) }}</div>
+      <div class="span3">{{ form_row(form.telefono_celular) }}</div>
+   </div>
+   <div class="row">
+      <div class="span3">{{ form_row(form.direccion) }}</div>
+      <div class="span3">{{ form_row(form.sexo) }}</div>
+      <div class="span3">{{ form_row(form.estado) }}</div>
+      <div class="span3">{{ form_row(form.condicion) }}</div>
+   </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('persona') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+   <p class="pull-right">
+     <input type="submit" value="Guardar" class="btn-small btn-primary btn" />
+     <input type="button" value="Cancelar" class="btn-small btn" onclick="location.href='{{ path('persona')}}'" />
+   </p>
+ </form>
 {% endblock %}
