@@ -89,16 +89,16 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
-            Título
-            <small><h3>{{titulo}}</h3></small>
-          </h1>
+          
         </section>
 
         <!-- Main content -->
         <section class="content">
           <!-- Main row -->
           <div class="row">
+            <section class="content-header">
+              <h1>Título<small><h2>{{titulo}}</h2></small></h1>
+            </section>
             <section class="col-lg-7 connectedSortable">
                 {% block body %}{% endblock %}
             </section>

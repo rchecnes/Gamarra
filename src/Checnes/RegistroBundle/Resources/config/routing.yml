@@ -1,3 +1,7 @@
+checnes_registro_persona:
+    resource: "@ChecnesRegistroBundle/Resources/config/routing/persona.yml"
+    prefix:   /persona
+
 checnes_registro_usuario:
     resource: "@ChecnesRegistroBundle/Resources/config/routing/usuario.yml"
     prefix:   /usuario
