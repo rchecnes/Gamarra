@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="8D8014FC-0D6A-961B-2622-C088064D1CFB">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-05-12 22:37:41 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diseno-gama" id="96F7CF12-50C0-B98D-260E-13D68F678EA6" version="3.5">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-05-12 22:37:41 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>96F7CF12-50C0-B98D-260E-13D68F678EA6</designId>
+</OSDM_Design>

@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="3DB10D15-CE78-6E31-4DD0-612400E68C06" name="TipoModelo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="8ECDA317-B522-D064-4564-6F4C6C66C105" name="Producto" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

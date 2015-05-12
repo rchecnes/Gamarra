@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="BA44D09B-7BF3-5DCE-C69D-2AC33B581C92">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-05-12 22:37:58 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="3DB10D15-CE78-6E31-4DD0-612400E68C06" otype="Entity" vid="6A9F6696-ADE1-88F5-B6E6-978825571759">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="547" y="174" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="8ECDA317-B522-D064-4564-6F4C6C66C105" otype="Entity" vid="5574D502-22AF-6BA4-83D8-66EFCBA9C8C5">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="160" y="127" width="170" height="110"/>
+</OView>
+</objectViews>
+</Diagram>

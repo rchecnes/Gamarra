@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="692C32E1-7F3A-4F48-79A9-F6DD7F121A76" mainViewID="BA44D09B-7BF3-5DCE-C69D-2AC33B581C92">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-05-12 22:37:41 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
