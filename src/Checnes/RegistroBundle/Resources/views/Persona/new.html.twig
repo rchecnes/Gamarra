@@ -1,25 +1,26 @@
 {% extends '::base.html.twig' %}
 
-{% block body -%}
+{% block body %}
 
- <form action="{{ path('persona_create') }}" method="post" {{ form_enctype(form) }} novalidate>
+<div class="input-group">
+ <form action="{{ path('persona_create') }}" method="POST" {{ form_enctype(form) }}>
    <div class="row">
-      <div class="span3">{{ form_row(form.dni) }}</div>
-      <div class="span3">{{ form_row(form.apellido_paterno) }}</div>
-      <div class="span3">{{ form_row(form.apellido_materno) }}</div>
-      <div class="span3">{{ form_row(form.nombres) }}</div>
+      <div class="col-md-3">{{ form_row(form.dni) }}</div>
+      <div class="col-md-3">{{ form_row(form.apellido_paterno) }}</div>
+      <div class="col-md-3">{{ form_row(form.apellido_materno) }}</div>
+      <div class="col-md-3">{{ form_row(form.nombres) }}</div>
    </div>
    <div class="row">
-      <div class="span3">{{ form_row(form.fecha_nacimiento) }}</div>
-      <div class="span3">{{ form_row(form.email) }}</div>
-      <div class="span3">{{ form_row(form.telefono_fijo) }}</div>
-      <div class="span3">{{ form_row(form.telefono_celular) }}</div>
+      <div class="col-md-3">{{ form_row(form.fecha_nacimiento) }}</div>
+      <div class="col-md-3">{{ form_row(form.email) }}</div>
+      <div class="col-md-3">{{ form_row(form.telefono_fijo) }}</div>
+      <div class="col-md-3">{{ form_row(form.telefono_celular) }}</div>
    </div>
    <div class="row">
-      <div class="span3">{{ form_row(form.direccion) }}</div>
-      <div class="span3">{{ form_row(form.sexo) }}</div>
-      <div class="span3">{{ form_row(form.estado) }}</div>
-      <div class="span3">{{ form_row(form.condicion) }}</div>
+      <div class="col-md-3">{{ form_row(form.direccion) }}</div>
+      <div class="col-md-3">{{ form_row(form.sexo) }}</div>
+      <div class="col-md-3">{{ form_row(form.estado) }}</div>
+      <div class="col-md-3">{{ form_row(form.condicion) }}</div>
    </div>
 
    <p class="pull-right">
@@ -27,4 +28,5 @@
      <input type="button" value="Cancelar" class="btn-small btn" onclick="location.href='{{ path('persona')}}'" />
    </p>
  </form>
+</div>
 {% endblock %}

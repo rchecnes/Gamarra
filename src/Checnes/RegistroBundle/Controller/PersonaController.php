@@ -37,15 +37,24 @@ class PersonaController extends Controller
     public function createAction(Request $request)
     {
         $entity = new Persona();
-        $form = $this->createCreateForm($entity);
-        $form->handleRequest($request);
+        $form = $this->createForm(new PersonaType(), $entity);
 
-        if ($form->isValid()) {
+        $detalle = $request->get("checnes_registrobundle_persona");
+        $form->bind($request);
+        //->['checnes_registrobundle_persona']
+        //$form->handleRequest($request);
+
+        //ld($detalle['fecha_nacimiento']);
+        ld($form->isValid());
+        ld($form->isValid());
+
+        if ($entity) {
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('persona_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('persona'));
         }
 
         $data['titulo']   = "Persona";
@@ -130,11 +139,12 @@ class PersonaController extends Controller
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('ChecnesRegistroBundle:Persona:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $data['titulo']      = "Persona - Editar registro";
+        $data['entity']      = $entity;
+        $data['edit_form']   = $editForm->createView();
+        $data['delete_form'] = $deleteForm->createView();
+
+        return $this->render('ChecnesRegistroBundle:Persona:edit.html.twig', $data);
     }
 
     /**
@@ -169,21 +179,22 @@ class PersonaController extends Controller
             throw $this->createNotFoundException('Unable to find Persona entity.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createEditForm($entity);
-        $editForm->handleRequest($request);
-
+        $editForm = $this->createForm(new PersonaType(), $entity);
+        //$editForm->bind($request);
+        $editForm->bind($request);
+ld($editForm->isValid());
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('persona_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('persona'));
         }
 
-        return $this->render('ChecnesRegistroBundle:Persona:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $data['titulo']    = "Persona - Editar registro";
+        $data['entity']    = $entity;
+        $data['edit_form'] = $editForm->createView();
+
+
+        return $this->render('ChecnesRegistroBundle:Persona:edit.html.twig', $data);
     }
     /**
      * Deletes a Persona entity.
