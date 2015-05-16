@@ -1,5 +1,5 @@
-checnes_registro:
-    resource: "@ChecnesRegistroBundle/Resources/config/routing.yml"
+crece_registro:
+    resource: "@CreceRegistroBundle/Resources/config/routing.yml"
     prefix:   /panel
 
 #app:

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8ECDA317-B522-D064-4564-6F4C6C66C105" name="Producto">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8ECDA317-B522-D064-4564-6F4C6C66C105" name="CortePrenda">
 <createdBy>Intimedia7</createdBy>
 <createdTime>2015-05-12 22:43:13 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
@@ -12,4 +12,105 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CorteId" id="70488984-BFFF-09F5-A540-363D38CCB9EB">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:00:35 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Cantidad" id="41B735D5-B103-EEED-5FB9-97DA6C9E71E3">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:00:51 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="Fecha" id="63B7BD61-8681-4CBB-D54C-22A103012EBC">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:02:12 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="EmpleadoId" id="9C10499D-0BC2-92B8-F887-CB36E8F66F26">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:07:22 UTC</createdTime>
+<generatorID>FF86F9C2-8D64-F34D-EC19-A0D1E05815AA</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E1C87F31-C0B6-CD76-032C-E922B52FF3D3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="ModeloId" id="53C73A51-12D8-3EF7-B7D3-9D03919BE257">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:13:51 UTC</createdTime>
+<generatorID>95207B51-CBFC-1541-22D4-941BA3D81B7F</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>93486242-D129-09B8-FCD9-36AC2FC3BA78</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Estado" id="2D07FE24-0D52-16A3-EADD-17BE72CD5D0A">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:42:36 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="Condicion" id="8F6477C9-AD25-DFFB-8715-4DF29EEEE6F8">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:42:44 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="Ano" id="52814F9A-D7B6-1001-8312-1781DC73AA30">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:42:53 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1EA29472-BD95-3B69-994F-21323A7A1419" name="Corte PK">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:00:50 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>70488984-BFFF-09F5-A540-363D38CCB9EB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

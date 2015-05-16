@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+ <form action="{{ path('persona_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+   <div class="row">
+      <div class="col-md-2">{{ form_row(edit_form.dni) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.apellido_paterno) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.apellido_materno) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.nombres) }}</div>
+   </div>
+   <div class="row">
+      <div class="col-md-2">{{ form_row(edit_form.fecha_nacimiento) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.email) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.telefono_fijo) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.telefono_celular) }}</div>
+   </div>
+   <div class="row">
+      <div class="col-md-2">{{ form_row(edit_form.direccion) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.sexo) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.estado) }}</div>
+      <div class="col-md-2">{{ form_row(edit_form.condicion) }}</div>
+   </div>
+
+   <p class="pull-right">
+     <input type="submit" value="Guardar" class="btn-small btn-primary btn" />
+     <input type="button" value="Cancelar" class="btn-small btn" onclick="location.href='{{ path('persona')}}'" />
+   </p>
+ </form>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+    <div class="row">
+        <p class="pull-right">
+            <a href="{{ path('persona_new') }}">Nuevo</a>
+        </p>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ítem</th>
+                <th>DNI</th>
+                <th>Nombres</th>
+                <th>Apellido paterno</th>
+                <th>Apellido materno</th>
+                <th>Fecha de nacimiento</th>
+                <th>Email</th>
+                <th>Teléfono fijo</th>
+                <th>Teléfono celular</th>
+                <th>Dirección</th>
+                <th>Sexo</th>
+                <th>Estado</th>
+                <th>Condicion</th>
+                <th colspan="2">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.dni }}</td>
+                <td>{{ entity.nombres }}</td>
+                <td>{{ entity.apellidoPaterno }}</td>
+                <td>{{ entity.apellidoMaterno }}</td>
+                <td>{{ entity.fechanacimiento}}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.telefonoFijo }}</td>
+                <td>{{ entity.telefonoCelular }}</td>
+                <td>{{ entity.direccion }}</td>
+                <td>{{ entity.sexo }}</td>
+                <td>{{ entity.estado }}</td>
+                <td>{{ entity.condicion }}</td>
+                <td>
+                    <a href="{{ path('persona_show', { 'id': entity.id }) }}">show</a>
+                </td>
+                <td class="action-icon">
+                    <a href="{{ path('persona_edit', { 'id': entity.id}) }}" title="Editar registro" >
+                        <!--<i class="icon-edit bigger-130"></i>-->Editar
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

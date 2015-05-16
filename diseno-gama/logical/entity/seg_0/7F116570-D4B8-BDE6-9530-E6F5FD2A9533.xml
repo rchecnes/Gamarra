@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3DB10D15-CE78-6E31-4DD0-612400E68C06" name="Empleado">
-<createdBy>Intimedia7</createdBy>
-<createdTime>2015-05-12 22:45:33 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7F116570-D4B8-BDE6-9530-E6F5FD2A9533" name="TipoModelo">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:46:31 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>diseno-gama</ownerDesignName>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -13,18 +13,29 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="EmpleadoId" id="E1C87F31-C0B6-CD76-032C-E922B52FF3D3">
+<Attribute name="TipoModeloId" id="786C7728-FEB8-AB55-DAD1-7BB63AA84DB9">
 <createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:04:40 UTC</createdTime>
+<createdTime>2015-05-16 08:46:41 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>diseno-gama</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
-<Attribute name="Estado" id="71EBFE49-0FD1-E5B5-BEAB-9DA1E5C9868D">
+<Attribute name="Nombre" id="7BC5086C-1A17-112F-D21B-99FA401B1312">
 <createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:04:54 UTC</createdTime>
+<createdTime>2015-05-16 08:46:53 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>120</dataTypeSize>
+</Attribute>
+<Attribute name="Estado" id="6996B51F-EAF0-FB01-E2F0-3A48DA9FAEAE">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:47:04 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>diseno-gama</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -33,9 +44,9 @@
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
 </Attribute>
-<Attribute name="Condicion" id="12EC93AD-287F-5AE6-8FDC-1B6A96BE7A40">
+<Attribute name="Condicion" id="298F376D-C78B-7D45-2761-46CC800FECE1">
 <createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:06:28 UTC</createdTime>
+<createdTime>2015-05-16 08:47:29 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>diseno-gama</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -43,40 +54,17 @@
 <use>1</use>
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
-</Attribute>
-<Attribute name="PersonaId" id="0018B3F8-F8F4-3313-1AC8-21BE0376DBDA">
-<createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:11:22 UTC</createdTime>
-<generatorID>62703DE0-CE72-5CD8-2D4B-7C98E524A559</generatorID>
-<ownerDesignName>diseno-gama</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>25ABAC2B-14D5-A55D-05F9-07B6A7D6072E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-</Attribute>
-<Attribute name="Ano" id="E7A9B819-F203-EBC0-A43D-8CBDAA5E2FFE">
-<createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:43:25 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>diseno-gama</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<dataTypeScale>0</dataTypeScale>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="F3914EBD-E5C3-7CFF-3212-C3804E930A43" name="Empleado PK">
+<identifier id="C5B3C99C-EC2B-A0FC-7EF3-4D39543AE385" name="TipoModelo PK">
 <createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:04:53 UTC</createdTime>
+<createdTime>2015-05-16 08:46:53 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>diseno-gama</ownerDesignName>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E1C87F31-C0B6-CD76-032C-E922B52FF3D3</attributeRef>
+<attributeRef>786C7728-FEB8-AB55-DAD1-7BB63AA84DB9</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

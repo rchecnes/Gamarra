@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="16DA5CB6-85F6-574A-C173-C06D0069C325" name="Persona">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:09:19 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PersonaId" id="25ABAC2B-14D5-A55D-05F9-07B6A7D6072E">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:09:53 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Nombre" id="F3B749A3-56EA-56A7-0DC0-26FEE723D5BE">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:10:09 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7390568C-ECD3-1591-C63B-8705AB17F706" name="Persona PK">
+<createdBy>admin</createdBy>
+<createdTime>2015-05-16 08:10:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>25ABAC2B-14D5-A55D-05F9-07B6A7D6072E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
