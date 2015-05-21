@@ -44,13 +44,10 @@ class PersonaController extends Controller
         //->['Crece_registrobundle_persona']
         //$form->handleRequest($request);
 
-        //ld($detalle['fecha_nacimiento']);
-        ld($form->isValid());
-        ld($form->isValid());
-
         if ($entity) {
 
             $em = $this->getDoctrine()->getManager();
+            $entity->setNombreImagen();
             $em->persist($entity);
             $em->flush();
 

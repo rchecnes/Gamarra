@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             //new AppBundle\AppBundle(),
             new Crece\RegistroBundle\CreceRegistroBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+            new Oneup\UploaderBundle\OneupUploaderBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

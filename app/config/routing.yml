@@ -1,3 +1,7 @@
+oneup_uploader:
+    resource: .
+    type: uploader
+
 crece_registro:
     resource: "@CreceRegistroBundle/Resources/config/routing.yml"
     prefix:   /panel

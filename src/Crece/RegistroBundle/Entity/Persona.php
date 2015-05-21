@@ -105,8 +105,39 @@ class Persona
      */
     private $condicion;
 
+    /**
+     * @ORM\Column(name="nombre_imagen", type="string", length=255, nullable=true)
+     */
+    public $nombre_imagen;
 
+    /**
+     * @ORM\Column(name="path", type="string", length=255, nullable=true)
+     */
+    public $path;
 
+    public function getNombreComprimido(){
+
+        $nombre_corto = substr($this->getNombres(),0,3);
+        $ape_pa_corto = substr($this->getApellidoPaterno(),0,3);
+        $ape_ma_corto = substr($this->getApellidoMaterno(),0,3);
+
+        $nombre_final = strtoupper('Usuario'.$nombre_corto.$ape_pa_corto.$ape_ma_corto.$this->getDni());
+
+        $nombre_final = str_replace(
+                    array("\\", "¨", "º", "-", "~",
+                         "#", "@", "|", "!", "\"",
+                         "·", "$", "%", "&", "/",
+                         "(", ")", "?", "'", "¡",
+                         "¿", "[", "^", "`", "]",
+                         "+", "}", "{", "¨", "´",
+                         ">", "< ", ";", ",", ":",
+                         ".", " "),
+                    '',
+                    $nombre_final
+                );
+
+        return $nombre_final;
+    }
 
     /**
      * Get id
@@ -392,5 +423,51 @@ class Persona
     public function getCondicion()
     {
         return $this->condicion;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     * @return Persona
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string 
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Set nombre_imagen
+     *
+     * @param string $nombreImagen
+     * @return Persona
+     */
+    public function setNombreImagen()
+    {
+        $this->nombre_imagen = $this->getNombreComprimido();
+
+        return $this;
+    }
+
+    /**
+     * Get nombre_imagen
+     *
+     * @return string 
+     */
+    public function getNombreImagen()
+    {
+        return $this->nombre_imagen;
     }
 }
