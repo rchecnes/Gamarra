@@ -4,7 +4,7 @@ oneup_uploader:
 
 crece_registro:
     resource: "@CreceRegistroBundle/Resources/config/routing.yml"
-    prefix:   /panel
+    prefix:   /
 
 #app:
 #    resource: "@AppBundle/Controller/"

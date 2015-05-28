@@ -47,7 +47,7 @@ class PersonaController extends Controller
         if ($entity) {
 
             $em = $this->getDoctrine()->getManager();
-            $entity->setNombreImagen();
+            //$entity->setNombreImagen();
             $em->persist($entity);
             $em->flush();
 

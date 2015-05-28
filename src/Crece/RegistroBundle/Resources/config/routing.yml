@@ -1,6 +1,6 @@
 crece_registro_persona:
     resource: "@CreceRegistroBundle/Resources/config/routing/persona.yml"
-    prefix:   /persona
+    prefix:   /
 
 crece_registro_usuario:
     resource: "@CreceRegistroBundle/Resources/config/routing/usuario.yml"
