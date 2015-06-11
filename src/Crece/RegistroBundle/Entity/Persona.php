@@ -118,88 +118,16 @@ class Persona
     public $path;
 
     /**
-     * @Assert\File(maxSize="6000000")
+     * @var string
+     * @Assert\File( maxSize = "3072k", mimeTypesMessage = "Please upload a valid Image")
+     * @ORM\Column(name="image", type="string", length=245, nullable=false)
      */
-    private $file;
-
-    /**
-     * Sets file.
-     *
-     * @param UploadedFile $file
-     */
-    public function setFile(UploadedFile $file = null)
-    {
-        $this->file = $file;
-    }
-
-    /**
-     * Get file.
-     *
-     * @return UploadedFile
-     */
-    public function getFile()
-    {
-        return $this->file;
-    }
-
-    
-    /*public function getNombreComprimido(){
-
-        $nombre_corto = substr($this->getNombres(),0,3);
-        $ape_pa_corto = substr($this->getApellidoPaterno(),0,3);
-        $ape_ma_corto = substr($this->getApellidoMaterno(),0,3);
-
-        $nombre_final = strtoupper('Usuario'.$nombre_corto.$ape_pa_corto.$ape_ma_corto.$this->getDni());
-
-        $nombre_final = str_replace(
-                    array("\\", "¨", "º", "-", "~",
-                         "#", "@", "|", "!", "\"",
-                         "·", "$", "%", "&", "/",
-                         "(", ")", "?", "'", "¡",
-                         "¿", "[", "^", "`", "]",
-                         "+", "}", "{", "¨", "´",
-                         ">", "< ", ";", ",", ":",
-                         ".", " "),
-                    '',
-                    $nombre_final
-                );
-
-        return $nombre_final;
-    }*/
-
-    public function getAbsolutePath()
-    {
-        return null === $this->path
-            ? null
-            : $this->getUploadRootDir().'/'.$this->path;
-    }
-
-    public function getWebPath()
-    {
-        return null === $this->path
-            ? null
-            : $this->getUploadDir().'/'.$this->path;
-    }
-
-    protected function getUploadRootDir()
-    {
-        // the absolute directory path where uploaded
-        // documents should be saved
-        return __DIR__.'/../../../../web/uploads'.$this->getUploadDir();
-    }
-
-    protected function getUploadDir()
-    {
-        // get rid of the __DIR__ so it doesn't screw up
-        // when displaying uploaded doc/image in the view.
-        return 'uploads/documents';
-    }
-
+    private $image;
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -222,7 +150,7 @@ class Persona
     /**
      * Get dni
      *
-     * @return string
+     * @return string 
      */
     public function getDni()
     {
@@ -245,7 +173,7 @@ class Persona
     /**
      * Get nombres
      *
-     * @return string
+     * @return string 
      */
     public function getNombres()
     {
@@ -268,7 +196,7 @@ class Persona
     /**
      * Get apellido_paterno
      *
-     * @return string
+     * @return string 
      */
     public function getApellidoPaterno()
     {
@@ -291,7 +219,7 @@ class Persona
     /**
      * Get apellido_materno
      *
-     * @return string
+     * @return string 
      */
     public function getApellidoMaterno()
     {
@@ -301,7 +229,7 @@ class Persona
     /**
      * Set fecha_nacimiento
      *
-     * @param \DateTime $fechaNacimiento
+     * @param string $fechaNacimiento
      * @return Persona
      */
     public function setFechaNacimiento($fechaNacimiento)
@@ -314,7 +242,7 @@ class Persona
     /**
      * Get fecha_nacimiento
      *
-     * @return \DateTime
+     * @return string 
      */
     public function getFechaNacimiento()
     {
@@ -337,7 +265,7 @@ class Persona
     /**
      * Get email
      *
-     * @return string
+     * @return string 
      */
     public function getEmail()
     {
@@ -360,7 +288,7 @@ class Persona
     /**
      * Get telefono_fijo
      *
-     * @return string
+     * @return string 
      */
     public function getTelefonoFijo()
     {
@@ -383,7 +311,7 @@ class Persona
     /**
      * Get telefono_celular
      *
-     * @return string
+     * @return string 
      */
     public function getTelefonoCelular()
     {
@@ -406,7 +334,7 @@ class Persona
     /**
      * Get direccion
      *
-     * @return string
+     * @return string 
      */
     public function getDireccion()
     {
@@ -429,7 +357,7 @@ class Persona
     /**
      * Get sexo
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getSexo()
     {
@@ -452,7 +380,7 @@ class Persona
     /**
      * Get estado
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getEstado()
     {
@@ -475,11 +403,34 @@ class Persona
     /**
      * Get condicion
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getCondicion()
     {
         return $this->condicion;
+    }
+
+    /**
+     * Set nombre_imagen
+     *
+     * @param string $nombreImagen
+     * @return Persona
+     */
+    public function setNombreImagen($nombreImagen)
+    {
+        $this->nombre_imagen = $nombreImagen;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre_imagen
+     *
+     * @return string 
+     */
+    public function getNombreImagen()
+    {
+        return $this->nombre_imagen;
     }
 
     /**
@@ -506,25 +457,27 @@ class Persona
     }
 
     /**
-     * Set nombre_imagen
+     * Set image
      *
-     * @param string $nombreImagen
+     * @param string $image
      * @return Persona
      */
-    public function setNombreImagen()
+    public function setImage($image)
     {
-        $this->nombre_imagen = $this->getNombreComprimido();
+        $this->image = $image;
 
         return $this;
     }
 
     /**
-     * Get nombre_imagen
+     * Get image
      *
      * @return string 
      */
-    public function getNombreImagen()
+    public function getImage()
     {
-        return $this->nombre_imagen;
+        return $this->image;
     }
+
+    
 }

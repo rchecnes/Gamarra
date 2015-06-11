@@ -71,8 +71,8 @@ class PersonaType extends AbstractType
             ->add('sexo')
             ->add('estado')
             ->add('condicion')
-            ->add('file', 'file', array(
-                'attr'          => array('class' => 'form-control input-sm'),
+            ->add('image', 'file', array(
+                'attr'          => array('class' => null),
                 'label'         => 'Imagen',
                 'required'      => true,
             ))

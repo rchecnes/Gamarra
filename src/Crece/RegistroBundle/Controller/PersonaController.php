@@ -41,6 +41,7 @@ class PersonaController extends Controller
 
         $detalle = $request->get("crece_registrobundle_persona");
         $form->bind($request);
+        //ld($detalle);exit;
         //->['Crece_registrobundle_persona']
         //$form->handleRequest($request);
 
