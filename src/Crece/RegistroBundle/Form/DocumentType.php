@@ -15,11 +15,20 @@ class DocumentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('file')
+            ->add('name', 'text', array(
+                'attr'          => array('class' => 'form-control input-sm'),
+                'label'         => 'DNI',
+                'max_length'    => 8,
+                'required'      => true,
+            ))
+            ->add('file', 'file', array(
+                'attr'          => array('class' => 'form-control input-sm'),
+                'label'         => 'Imagen',
+                'required'      => true,
+            ))
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

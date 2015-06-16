@@ -55,7 +55,7 @@ class Document
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -78,7 +78,7 @@ class Document
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -101,7 +101,7 @@ class Document
     /**
      * Get path
      *
-     * @return string 
+     * @return string
      */
     public function getPath()
     {
@@ -115,15 +115,16 @@ class Document
      */
     public function setFile(UploadedFile $file = null)
     {
+
         $this->file = $file;
 
         // check if we have an old image path
-        if (is_file($this->getAbsolutePath())) {
+        /*if (is_file($this->getAbsolutePath())) {
             // store the old name to delete after the update
             $this->temp = $this->getAbsolutePath();
         } else {
             $this->path = 'initial';
-        }
+        }*/
     }
 
     /**
@@ -137,19 +138,19 @@ class Document
     }
 
 
-    public function getAbsolutePath()
+    /*public function getAbsolutePath()
     {
         return null === $this->path
             ? null
             : $this->getUploadRootDir().'/'.$this->id.'.'.$this->path;
-    }
+    }*/
 
-    public function getWebPath()
+    /*public function getWebPath()
     {
         return null === $this->path
             ? null
             : $this->getUploadDir().'/'.$this->path;
-    }
+    }*/
 
     protected function getUploadRootDir()
     {
@@ -169,12 +170,12 @@ class Document
      * @ORM\PrePersist()
      * @ORM\PreUpdate()
      */
-    public function preUpload()
+    /*public function preUpload()
     {
         if (null !== $this->getFile()) {
             $this->path = $this->getFile()->guessExtension();
         }
-    }
+    }*/
 
     public function upload()
     {
@@ -189,13 +190,12 @@ class Document
             // clear the temp image path
             $this->temp = null;
         }
-        
-        $tipo = $this->getFile()->guessExtension();
 
+        $tipo = $this->getFile()->guessExtension();
         // you must throw an exception here if the file cannot be moved
         // so that the entity is not persisted to the database
         // which the UploadedFile move() method does
-        
+
         $this->getFile()->move(
             $this->getUploadRootDir(),
             $this->getName().'.'.$this->getFile()->guessExtension()
@@ -211,20 +211,20 @@ class Document
     /**
      * @ORM\PreRemove()
      */
-    public function storeFilenameForRemove()
+    /*public function storeFilenameForRemove()
     {
         $this->temp = $this->getAbsolutePath();
-    }
+    }*/
 
     /**
      * @ORM\PostRemove()
      */
-    public function removeUpload()
+    /*public function removeUpload()
     {
         if (isset($this->temp)) {
             unlink($this->temp);
         }
-    }
+    }*/
 
     /**
      * Set tipo
@@ -242,7 +242,7 @@ class Document
     /**
      * Get tipo
      *
-     * @return string 
+     * @return string
      */
     public function getTipo()
     {

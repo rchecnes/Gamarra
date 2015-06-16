@@ -16,6 +16,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('assets/css/Thema/_all-skins.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+
     {% endblock %}
 
   </head>
@@ -129,11 +132,11 @@
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 
     <script type="text/javascript">
-    
+
     if (localStorage.getItem("menu_activo") =='' || localStorage.getItem("menu_activo") == null) {
         localStorage.setItem("menu_activo", "inicio");
     };
-    
+
     $(document).ready(function(){
       //alert(localStorage.getItem("menu_activo"));
       $("ul.sidebar-menu li").removeClass("active");

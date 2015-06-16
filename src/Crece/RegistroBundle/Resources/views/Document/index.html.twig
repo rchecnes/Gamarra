@@ -1,9 +1,15 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-<a href="{{ path('document_new') }}">
-                Create a new entry
+
+    <div class="row">
+        <p class="pull-right">
+            <a href="{{ path('document_new') }}" class="btn btn-primary btn-small" >
+                <i class="icon-plus"></i>Nuevo
             </a>
+        </p>
+    </div>
+
     <table class="table table-bordered">
         <thead>
             <tr>
