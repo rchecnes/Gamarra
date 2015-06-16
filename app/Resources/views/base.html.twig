@@ -59,22 +59,22 @@
             GRUPO|RITECH
           </div><br>
           <ul class="sidebar-menu">
-            <li class="treeview active">
+            <li class="treeview active" id="inicio">
               <a href="{{ path('persona') }}">
                 <i class="fa fa-pie-chart"></i>
                 <span>Personas</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
-            <li class="treeview">
+            <li class="treeview" id="usuario">
               <a href="{{ path('usuario') }}">
                 <i class="fa fa-laptop"></i>
                 <span>Usuarios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
-            <li class="treeview">
-              <a href="#">
+            <li class="treeview" id="prenda">
+              <a href="{{ path('usuario') }}">
                 <i class="fa fa-laptop"></i>
                 <span>Administrar Corte de Prendas</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -120,6 +120,26 @@
     <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
+    <script type="text/javascript">
+    
+    if (localStorage.getItem("menu_activo") =='' || localStorage.getItem("menu_activo") == null) {
+        localStorage.setItem("menu_activo", "inicio");
+    };
+    
+    $(document).ready(function(){
+      //alert(localStorage.getItem("menu_activo"));
+      $("ul.sidebar-menu li").removeClass("active");
+      $("ul.sidebar-menu li#"+localStorage.getItem("menu_activo")).addClass("active");
+
+      $("ul.sidebar-menu li").click(function(){
+        localStorage.setItem("menu_activo", $(this).attr('id'));
+        $("ul.sidebar-menu li").removeClass("active");
+        $(this).addClass("active");
+      });
+
+    });
+    </script>
     {% endblock %}
 
   </body>
