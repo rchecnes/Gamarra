@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<a href="{{ path('document_new') }}">
+                Create a new entry
+            </a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Path</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('document_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.path }}</td>
+                <td>
+                    {% set foto = entity.path~'/'~entity.name ~ '.'~ entity.tipo %}
+                    <img src="{{ asset(foto) }}" class="user-image" alt="User Image" width="50" height="50"/>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

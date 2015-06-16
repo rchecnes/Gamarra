@@ -1,3 +1,7 @@
+crece_registro_document:
+    resource: "@CreceRegistroBundle/Resources/config/routing/document.yml"
+    prefix:   /document
+
 crece_registro_persona:
     resource: "@CreceRegistroBundle/Resources/config/routing/persona.yml"
     prefix:   /
