@@ -16,4 +16,22 @@ body{
   font-size: 20px;
   margin-top: 0px;
   margin-bottom: 3px;
+  font-weight: 570;
+  color: #191919;
+}
+
+.content .content-page{
+ padding-left: 15px;
+ padding-right: 15px;
+}
+
+label{
+ font-weight: 500;
+ margin-bottom: 0px;
+}
+
+.row{
+ padding-bottom: 5px;
+ padding-right: 0px;
+ padding-left: 0px;
 }

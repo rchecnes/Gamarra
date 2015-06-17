@@ -42,6 +42,7 @@ class PersonaType extends AbstractType
             ->add('fecha_nacimiento', 'text', array(
                 'attr'          => array('class' => 'form-control input-sm'),
                 'label'         => 'Fecha de nacimiento',
+                'read_only'     => true,
                 'required'      => true,
             ))
             ->add('email', 'text', array(
@@ -71,11 +72,6 @@ class PersonaType extends AbstractType
             ->add('sexo')
             ->add('estado')
             ->add('condicion')
-            ->add('image', 'file', array(
-                'attr'          => array('class' => null),
-                'label'         => 'Imagen',
-                'required'      => true,
-            ))
         ;
     }
 

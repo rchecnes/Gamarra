@@ -39,20 +39,19 @@ class PersonaController extends Controller
         $entity = new Persona();
         $form = $this->createForm(new PersonaType(), $entity);
 
-        $detalle = $request->get("crece_registrobundle_persona");
-        $form->bind($request);
-        ld($detalle);exit;
-        //->['Crece_registrobundle_persona']
-        //$form->handleRequest($request);
+        //$detalle = $request->get("crece_registrobundle_persona");
 
-        if ($entity) {
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
 
             $em = $this->getDoctrine()->getManager();
-            //$entity->setNombreImagen();
             $em->persist($entity);
             $em->flush();
 
             return $this->redirect($this->generateUrl('persona'));
+        }else{
+            ld($form->getErrorsAsString());exit;
         }
 
         $data['titulo']   = "Persona";

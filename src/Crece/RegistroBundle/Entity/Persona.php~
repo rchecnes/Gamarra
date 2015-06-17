@@ -1,0 +1,112 @@
+<?php
+
+namespace Crece\RegistroBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+/**
+ * Persona
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Persona
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dni", type="string", length=8)
+     */
+    private $dni;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombres", type="string", length=255)
+     */
+    private $nombres;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="apellido_paterno", type="string", length=255)
+     */
+    private $apellido_paterno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="apellido_materno", type="string", length=255)
+     */
+    private $apellido_materno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fecha_nacimiento", type="string", length=255)
+     */
+    private $fecha_nacimiento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono_fijo", type="string", length=10)
+     */
+    private $telefono_fijo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono_celular", type="string", length=10)
+     */
+    private $telefono_celular;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=255)
+     */
+    private $direccion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="sexo", type="boolean")
+     */
+    private $sexo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="estado", type="boolean")
+     */
+    private $estado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="condicion", type="boolean")
+     */
+    private $condicion;
+
+
+
+}

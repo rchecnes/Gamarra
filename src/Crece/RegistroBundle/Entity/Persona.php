@@ -107,22 +107,8 @@ class Persona
      */
     private $condicion;
 
-    /**
-     * @ORM\Column(name="nombre_imagen", type="string", length=255, nullable=true)
-     */
-    public $nombre_imagen;
 
-    /**
-     * @ORM\Column(name="path", type="string", length=255, nullable=true)
-     */
-    public $path;
 
-    /**
-     * @var string
-     * @Assert\File( maxSize = "3072k", mimeTypesMessage = "Please upload a valid Image")
-     * @ORM\Column(name="image", type="string", length=245, nullable=false)
-     */
-    private $image;
 
     /**
      * Get id
@@ -409,75 +395,4 @@ class Persona
     {
         return $this->condicion;
     }
-
-    /**
-     * Set nombre_imagen
-     *
-     * @param string $nombreImagen
-     * @return Persona
-     */
-    public function setNombreImagen($nombreImagen)
-    {
-        $this->nombre_imagen = $nombreImagen;
-
-        return $this;
-    }
-
-    /**
-     * Get nombre_imagen
-     *
-     * @return string 
-     */
-    public function getNombreImagen()
-    {
-        return $this->nombre_imagen;
-    }
-
-    /**
-     * Set path
-     *
-     * @param string $path
-     * @return Persona
-     */
-    public function setPath($path)
-    {
-        $this->path = $path;
-
-        return $this;
-    }
-
-    /**
-     * Get path
-     *
-     * @return string 
-     */
-    public function getPath()
-    {
-        return $this->path;
-    }
-
-    /**
-     * Set image
-     *
-     * @param string $image
-     * @return Persona
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string 
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    
 }
