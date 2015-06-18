@@ -24,7 +24,7 @@
                 <th>Sexo</th>
                 <th>Estado</th>
                 <th>Condicion</th>
-                <th colspan="2">Acciones</th>
+                <th colspan="1">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -43,12 +43,11 @@
                 <td>{{ entity.sexo }}</td>
                 <td>{{ entity.estado }}</td>
                 <td>{{ entity.condicion }}</td>
-                <td>
-                    <a href="{{ path('persona_show', { 'id': entity.id }) }}">show</a>
-                </td>
                 <td class="action-icon">
+
                     <a href="{{ path('persona_edit', { 'id': entity.id}) }}" title="Editar registro" >
-                        <!--<i class="icon-edit bigger-130"></i>-->Editar
+                        <li class="glyphicon glyphicon-edit"></li>
+                        <!--Editar-->
                     </a>
                 </td>
             </tr>
