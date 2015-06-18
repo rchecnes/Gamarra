@@ -77,3 +77,10 @@ oneup_uploader:
     mappings:
         gallery:
             frontend: blueimp # or any uploader you use in the frontend
+
+
+services:
+    Crece.twig.registro_extension:
+        class: Crece\RegistroBundle\Twig\TwigExtension
+        tags:
+            - { name: twig.extension }
