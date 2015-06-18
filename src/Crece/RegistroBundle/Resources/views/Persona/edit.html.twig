@@ -22,11 +22,12 @@
       <div class="col-md-2">{{ form_row(edit_form.condicion) }}</div>
       <div>{{ form_row(edit_form._token) }}</div>
    </div>
+   <p class="pull-right">
+     <input type="submit" value="Guardar" class="btn-small btn-primary btn" />
+     <input type="button" value="Cancelar" class="btn-small btn" onclick="location.href='{{ path('persona')}}'" />
+   </p>
 </form>
-<p class="pull-right">
-  <input type="submit" value="Guardar" class="btn-small btn-primary btn" />
-  <input type="button" value="Cancelar" class="btn-small btn" onclick="location.href='{{ path('persona')}}'" />
-</p>
+
 <script type="text/javascript">
    $(document).ready(function(){
 
