@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>CortePrenda</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad</th>
+                <td>{{ entity.cantidad }}</td>
+            </tr>
+            <tr>
+                <th>Fecha_creacion</th>
+                <td>{{ entity.fechacreacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Fecha_modificación</th>
+                <td>{{ entity.fechamodificación|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Ano</th>
+                <td>{{ entity.ano }}</td>
+            </tr>
+            <tr>
+                <th>Estado</th>
+                <td>{{ entity.estado }}</td>
+            </tr>
+            <tr>
+                <th>Condicion</th>
+                <td>{{ entity.condicion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('corteprenda') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('corteprenda_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

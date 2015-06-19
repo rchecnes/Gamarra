@@ -3,10 +3,9 @@
 {% block body -%}
 
 
-        <p class="pull-right">
-            <a class="btn-small btn-primary btn" href="{{ path('persona_new') }}">Nuevo</a>
-        </p>
-
+    <p class="pull-right">
+        <a class="btn-small btn-primary btn" href="{{ path('persona_new') }}">Nuevo</a>
+    </p>
 
     <table class="table table-striped table-bordered table-condensed">
         <thead>
@@ -44,7 +43,6 @@
                 <td>{{ entity.estado }}</td>
                 <td>{{ entity.condicion }}</td>
                 <td class="action-icon">
-
                     <a href="{{ path('persona_edit', { 'id': entity.id}) }}" title="Editar registro" >
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                     </a>

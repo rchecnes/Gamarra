@@ -1,0 +1,30 @@
+corteprenda:
+    path:     /
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:index" }
+
+corteprenda_show:
+    path:     /{id}/show
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:show" }
+
+corteprenda_new:
+    path:     /new
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:new" }
+
+corteprenda_create:
+    path:     /create
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:create" }
+    methods:  POST
+
+corteprenda_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:edit" }
+
+corteprenda_update:
+    path:     /{id}/update
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:update" }
+    methods:  [POST, PUT]
+
+corteprenda_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CreceRegistroBundle:CortePrenda:delete" }
+    methods:  [POST, DELETE]

@@ -1,3 +1,7 @@
+crece_registro_corteprenda:
+    resource: "@CreceRegistroBundle/Resources/config/routing/corteprenda.yml"
+    prefix:   /corteprenda
+
 crece_registro_document:
     resource: "@CreceRegistroBundle/Resources/config/routing/document.yml"
     prefix:   /document

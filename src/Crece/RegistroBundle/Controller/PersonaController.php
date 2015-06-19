@@ -25,7 +25,8 @@ class PersonaController extends Controller
 
         $entities = $em->getRepository('CreceRegistroBundle:Persona')->findAll();
 
-        $data['titulo']   = "Listado de Personas";
+        $data['titulo_cabecera']    = "Personas";
+        $data['titulo_principal']   = "Listado de Personas";
         $data['entities'] = $entities;
 
         return $this->render('CreceRegistroBundle:Persona:index.html.twig',$data);
@@ -54,7 +55,7 @@ class PersonaController extends Controller
             ld($form->getErrorsAsString());exit;
         }
 
-        $data['titulo']   = "Persona";
+        $data['titulo_principal']   = "Persona";
         $data['entity']   = $entity;
         $data['form']     = $form->createView();
 
@@ -89,7 +90,7 @@ class PersonaController extends Controller
         $entity = new Persona();
         $form   = $this->createCreateForm($entity);
 
-        $data['titulo']   = "Persona - Nuego Registro";
+        $data['titulo_principal']   = "Persona - Nuego Registro";
         $data['entity']   = $entity;
         $data['form']     = $form->createView();
 
@@ -112,7 +113,7 @@ class PersonaController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
 
-        $data['titulo']   = "Persona";
+        $data['titulo_principal']   = "Persona";
         $data['entity']   = $entity;
         $data['delete_form']   = $deleteForm->createView();
 
@@ -136,7 +137,7 @@ class PersonaController extends Controller
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        $data['titulo']      = "Persona - Editar registro";
+        $data['titulo_principal']      = "Persona - Editar registro";
         $data['entity']      = $entity;
         $data['edit_form']   = $editForm->createView();
         $data['delete_form'] = $deleteForm->createView();
@@ -186,7 +187,7 @@ class PersonaController extends Controller
             return $this->redirect($this->generateUrl('persona'));
         }
 
-        $data['titulo']    = "Persona - Editar registro";
+        $data['titulo_principal']    = "Persona - Editar registro";
         $data['entity']    = $entity;
         $data['edit_form'] = $editForm->createView();
 

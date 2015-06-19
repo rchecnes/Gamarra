@@ -1,11 +1,14 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.logical.LogicalDesign>
    <object objectType="Entity" objectID="8ECDA317-B522-D064-4564-6F4C6C66C105" name="CortePrenda" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3DB10D15-CE78-6E31-4DD0-612400E68C06" name="Empleado" seqName="seg_0"/>
    <object objectType="Entity" objectID="C09DC965-FEBC-96A1-DE28-7CAC811DFAD3" name="Menu" seqName="seg_0"/>
-   <object objectType="Entity" objectID="E81DA8D6-DEDB-7B87-6CD8-6B9BADC71090" name="Modelo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E81DA8D6-DEDB-7B87-6CD8-6B9BADC71090" name="ModeloPrenda" seqName="seg_0"/>
    <object objectType="Entity" objectID="16DA5CB6-85F6-574A-C173-C06D0069C325" name="Persona" seqName="seg_0"/>
    <object objectType="Entity" objectID="7F116570-D4B8-BDE6-9530-E6F5FD2A9533" name="TipoModelo" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FF86F9C2-8D64-F34D-EC19-A0D1E05815AA" name="Relation_3" seqName="seg_0"/>
    <object objectType="Relation" objectID="58BA81CE-D0A3-C1F9-9943-DFD5B30EE76F" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="62703DE0-CE72-5CD8-2D4B-7C98E524A559" name="Relation_5v1" seqName="seg_0"/>
    <object objectType="Relation" objectID="95207B51-CBFC-1541-22D4-941BA3D81B7F" name="Relation_6" seqName="seg_0"/>
    <object objectType="Relation" objectID="497ED4CA-5826-7BEC-BA7B-B9E6970431B2" name="Relation_7" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.logical.LogicalDesign>

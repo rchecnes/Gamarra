@@ -5,12 +5,12 @@ namespace Crece\RegistroBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TipoModelo
+ * Modelo
  *
- * @ORM\Table(name="tipo_modelo")
+ * @ORM\Table(name="modelo_prenda")
  * @ORM\Entity
  */
-class TipoModelo
+class ModeloPrenda
 {
     /**
      * @var integer
@@ -50,16 +50,23 @@ class TipoModelo
     private $condicion;
 
     /**
-     * @ORM\OneToMany(targetEntity="Crece\RegistroBundle\Entity\ModeloPrenda", mappedBy="modelo_prenda")
+     * @ORM\ManyToOne(targetEntity="Crece\RegistroBundle\Entity\TipoModelo", inversedBy="tipo_modelo")
+     * @ORM\JoinColumn(name="tipo_modelo_id", referencedColumnName="id")
      */
-    private $tipo_modelo;
+    protected $modelo_prenda;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Crece\RegistroBundle\Entity\CortePrenda", mappedBy="modelo_prenda")
+     */
+    private $corte_prenda;
+
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->tipo_modelo = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->corte_prenda = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -76,7 +83,7 @@ class TipoModelo
      * Set nombre
      *
      * @param string $nombre
-     * @return TipoModelo
+     * @return ModeloPrenda
      */
     public function setNombre($nombre)
     {
@@ -99,7 +106,7 @@ class TipoModelo
      * Set descripcion
      *
      * @param string $descripcion
-     * @return TipoModelo
+     * @return ModeloPrenda
      */
     public function setDescripcion($descripcion)
     {
@@ -122,7 +129,7 @@ class TipoModelo
      * Set estado
      *
      * @param boolean $estado
-     * @return TipoModelo
+     * @return ModeloPrenda
      */
     public function setEstado($estado)
     {
@@ -145,7 +152,7 @@ class TipoModelo
      * Set condicion
      *
      * @param boolean $condicion
-     * @return TipoModelo
+     * @return ModeloPrenda
      */
     public function setCondicion($condicion)
     {
@@ -165,35 +172,58 @@ class TipoModelo
     }
 
     /**
-     * Add tipo_modelo
+     * Set modelo_prenda
      *
-     * @param \Crece\RegistroBundle\Entity\ModeloPrenda $tipoModelo
-     * @return TipoModelo
+     * @param \Crece\RegistroBundle\Entity\TipoModelo $modeloPrenda
+     * @return ModeloPrenda
      */
-    public function addTipoModelo(\Crece\RegistroBundle\Entity\ModeloPrenda $tipoModelo)
+    public function setModeloPrenda(\Crece\RegistroBundle\Entity\TipoModelo $modeloPrenda = null)
     {
-        $this->tipo_modelo[] = $tipoModelo;
+        $this->modelo_prenda = $modeloPrenda;
 
         return $this;
     }
 
     /**
-     * Remove tipo_modelo
+     * Get modelo_prenda
      *
-     * @param \Crece\RegistroBundle\Entity\ModeloPrenda $tipoModelo
+     * @return \Crece\RegistroBundle\Entity\TipoModelo 
      */
-    public function removeTipoModelo(\Crece\RegistroBundle\Entity\ModeloPrenda $tipoModelo)
+    public function getModeloPrenda()
     {
-        $this->tipo_modelo->removeElement($tipoModelo);
+        return $this->modelo_prenda;
     }
 
     /**
-     * Get tipo_modelo
+     * Add corte_prenda
+     *
+     * @param \Crece\RegistroBundle\Entity\CortePrenda $cortePrenda
+     * @return ModeloPrenda
+     */
+    public function addCortePrenda(\Crece\RegistroBundle\Entity\CortePrenda $cortePrenda)
+    {
+        $this->corte_prenda[] = $cortePrenda;
+
+        return $this;
+    }
+
+    /**
+     * Remove corte_prenda
+     *
+     * @param \Crece\RegistroBundle\Entity\CortePrenda $cortePrenda
+     */
+    public function removeCortePrenda(\Crece\RegistroBundle\Entity\CortePrenda $cortePrenda)
+    {
+        $this->corte_prenda->removeElement($cortePrenda);
+    }
+
+    /**
+     * Get corte_prenda
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getTipoModelo()
+    public function getCortePrenda()
     {
-        return $this->tipo_modelo;
+        return $this->corte_prenda;
     }
 }

@@ -45,7 +45,7 @@ class CortePrenda
     /**
      * @var string
      *
-     * @ORM\Column(name="Ano", type="string", length=4)
+     * @ORM\Column(name="ano", type="string", length=4)
      */
     private $ano;
 
@@ -69,12 +69,16 @@ class CortePrenda
      */
     protected $persona;
 
-    
+    /**
+     * @ORM\ManyToOne(targetEntity="Crece\RegistroBundle\Entity\ModeloPrenda", inversedBy="corte_prenda")
+     * @ORM\JoinColumn(name="modelo_prenda_id", referencedColumnName="id")
+     */
+    protected $modelo_prenda;
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -97,7 +101,7 @@ class CortePrenda
     /**
      * Get cantidad
      *
-     * @return integer 
+     * @return integer
      */
     public function getCantidad()
     {
@@ -120,7 +124,7 @@ class CortePrenda
     /**
      * Get fecha_creacion
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getFechaCreacion()
     {
@@ -143,7 +147,7 @@ class CortePrenda
     /**
      * Get fecha_modificación
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getFechaModificación()
     {
@@ -166,7 +170,7 @@ class CortePrenda
     /**
      * Get ano
      *
-     * @return string 
+     * @return string
      */
     public function getAno()
     {
@@ -189,7 +193,7 @@ class CortePrenda
     /**
      * Get estado
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getEstado()
     {
@@ -212,7 +216,7 @@ class CortePrenda
     /**
      * Get condicion
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getCondicion()
     {
@@ -235,10 +239,33 @@ class CortePrenda
     /**
      * Get persona
      *
-     * @return \Crece\RegistroBundle\Entity\Persona 
+     * @return \Crece\RegistroBundle\Entity\Persona
      */
     public function getPersona()
     {
         return $this->persona;
+    }
+
+    /**
+     * Set modelo_prenda
+     *
+     * @param \Crece\RegistroBundle\Entity\ModeloPrenda $modeloPrenda
+     * @return CortePrenda
+     */
+    public function setModeloPrenda(\Crece\RegistroBundle\Entity\ModeloPrenda $modeloPrenda = null)
+    {
+        $this->modelo_prenda = $modeloPrenda;
+
+        return $this;
+    }
+
+    /**
+     * Get modelo_prenda
+     *
+     * @return \Crece\RegistroBundle\Entity\ModeloPrenda
+     */
+    public function getModeloPrenda()
+    {
+        return $this->modelo_prenda;
     }
 }
