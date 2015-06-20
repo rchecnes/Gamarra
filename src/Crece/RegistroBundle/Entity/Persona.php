@@ -110,9 +110,13 @@ class Persona
     /**
      * @ORM\OneToMany(targetEntity="Crece\RegistroBundle\Entity\CortePrenda", mappedBy="persona")
      */
-     private $corte_prenda; 
+     private $corte_prenda;
 
-    
+    public function __toString()
+    {
+        return $this->nombres;
+    }
+
     /**
      * Constructor
      */
@@ -124,7 +128,7 @@ class Persona
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -147,7 +151,7 @@ class Persona
     /**
      * Get dni
      *
-     * @return string 
+     * @return string
      */
     public function getDni()
     {
@@ -170,7 +174,7 @@ class Persona
     /**
      * Get nombres
      *
-     * @return string 
+     * @return string
      */
     public function getNombres()
     {
@@ -193,7 +197,7 @@ class Persona
     /**
      * Get apellido_paterno
      *
-     * @return string 
+     * @return string
      */
     public function getApellidoPaterno()
     {
@@ -216,7 +220,7 @@ class Persona
     /**
      * Get apellido_materno
      *
-     * @return string 
+     * @return string
      */
     public function getApellidoMaterno()
     {
@@ -239,7 +243,7 @@ class Persona
     /**
      * Get fecha_nacimiento
      *
-     * @return string 
+     * @return string
      */
     public function getFechaNacimiento()
     {
@@ -262,7 +266,7 @@ class Persona
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -285,7 +289,7 @@ class Persona
     /**
      * Get telefono_fijo
      *
-     * @return string 
+     * @return string
      */
     public function getTelefonoFijo()
     {
@@ -308,7 +312,7 @@ class Persona
     /**
      * Get telefono_celular
      *
-     * @return string 
+     * @return string
      */
     public function getTelefonoCelular()
     {
@@ -331,7 +335,7 @@ class Persona
     /**
      * Get direccion
      *
-     * @return string 
+     * @return string
      */
     public function getDireccion()
     {
@@ -354,7 +358,7 @@ class Persona
     /**
      * Get sexo
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getSexo()
     {
@@ -377,7 +381,7 @@ class Persona
     /**
      * Get estado
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getEstado()
     {
@@ -400,7 +404,7 @@ class Persona
     /**
      * Get condicion
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getCondicion()
     {
@@ -433,7 +437,7 @@ class Persona
     /**
      * Get corte_prenda
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getCortePrenda()
     {

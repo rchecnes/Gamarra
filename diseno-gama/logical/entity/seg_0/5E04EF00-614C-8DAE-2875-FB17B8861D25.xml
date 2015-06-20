@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5E04EF00-614C-8DAE-2875-FB17B8861D25" name="Color">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:27:23 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ColorId" id="66E72D11-4943-EA9A-0571-90EC3472D4E2">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:27:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Nombre" id="DF09E875-415A-C357-189E-1CC0EC16296E">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:27:44 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="Descripcion" id="33DF4CCB-800F-104E-BAA9-C5E81708C128">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:28:00 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+</Attribute>
+<Attribute name="Estado" id="A43AFBE4-97A0-910B-C1D3-4C01333661FC">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:28:13 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="Condicion" id="EC907CB3-4C4E-7A39-6A4C-862982768658">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:28:31 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2A47CE4D-4C6D-B7FD-FB45-0AD9697B4BF5" name="Color PK">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:27:43 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>66E72D11-4943-EA9A-0571-90EC3472D4E2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

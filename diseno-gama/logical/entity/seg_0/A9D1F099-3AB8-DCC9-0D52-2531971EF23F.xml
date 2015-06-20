@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A9D1F099-3AB8-DCC9-0D52-2531971EF23F" name="CortePrendaDetalle">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:21:45 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="7C48DC44-3D26-4749-3EA9-6071A990CE0C">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:22:19 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Cantidad" id="0B202E61-D06F-FC23-A9F7-8F8D92BC4EFE">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:22:49 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="Estado" id="E544232A-5F40-CED3-3F7B-E934D1FAD670">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:26:52 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="ColorId" id="8623AA45-AB27-2CB2-603F-D455858086C6">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:28:59 UTC</createdTime>
+<generatorID>51FB94B1-E90D-562E-3236-43BBB47A8D8D</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>66E72D11-4943-EA9A-0571-90EC3472D4E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="CortePrendaId" id="1D88732D-5D03-3E73-2221-D275FDD3361A">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:29:16 UTC</createdTime>
+<generatorID>8CF96341-87B7-73EF-A5B7-7E3BB772BF34</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>70488984-BFFF-09F5-A540-363D38CCB9EB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="12134385-8769-BC42-D8A6-15C6B9763D6B" name="CortePrendaDetalle PK">
+<createdBy>admin</createdBy>
+<createdTime>2015-06-20 07:22:47 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7C48DC44-3D26-4749-3EA9-6071A990CE0C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

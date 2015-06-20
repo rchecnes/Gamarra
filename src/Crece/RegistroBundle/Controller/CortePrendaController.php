@@ -40,42 +40,35 @@ class CortePrendaController extends Controller
      */
     public function createAction(Request $request)
     {
+
         $entity = new CortePrenda();
-        $form = $this->createCreateForm($entity);
+        $form = $this->createForm(new CortePrendaType(), $entity, array());
         $form->handleRequest($request);
 
+        $campos = $request->get("crece_registrobundle_corteprenda");
+
         if ($form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
+            $entity->setFechaCorte(new \DateTime($campos['fecha_corte']));
+            $entity->setFechaCreacion(new \DateTime());
+            $entity->setCantidadTotal(200);
+            $entity->setAno(2015);
+            $entity->setEstado(true);
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('corteprenda_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('corteprenda', array()));
         }
 
-        return $this->render('CreceRegistroBundle:CortePrenda:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        ));
+        $data['titulo_cabecera']   = "Cortes";
+        $data['titulo_principal']  = "Corte - Nuevo registro";
+        $data['entity']            = $entity;
+        $data['form']              = $form->createView();
+
+        return $this->render('CreceRegistroBundle:CortePrenda:new.html.twig', $data);
     }
 
-    /**
-     * Creates a form to create a CortePrenda entity.
-     *
-     * @param CortePrenda $entity The entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createCreateForm(CortePrenda $entity)
-    {
-        $form = $this->createForm(new CortePrendaType(), $entity, array(
-            'action' => $this->generateUrl('corteprenda_create'),
-            'method' => 'POST',
-        ));
-
-        $form->add('submit', 'submit', array('label' => 'Create'));
-
-        return $form;
-    }
 
     /**
      * Displays a form to create a new CortePrenda entity.
@@ -84,12 +77,14 @@ class CortePrendaController extends Controller
     public function newAction()
     {
         $entity = new CortePrenda();
-        $form   = $this->createCreateForm($entity);
+        $form   = $this->createForm(new CortePrendaType(), $entity, array());
 
-        return $this->render('CreceRegistroBundle:CortePrenda:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        ));
+        $data['titulo_cabecera']   = "Cortes";
+        $data['titulo_principal']  = "Corte - Nuevo registro";
+        $data['entity']            = $entity;
+        $data['form']              = $form->createView();
+
+        return $this->render('CreceRegistroBundle:CortePrenda:new.html.twig', $data);
     }
 
     /**

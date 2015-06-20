@@ -10,8 +10,9 @@
         <thead>
             <tr>
                 <th>Ítem</th>
-                <th>Modelo</th>
-                <th>Cantidad</th>
+                <th>Nombre</th>
+                <th>Tipo de modelo</th>
+                <th>Total corte</th>
                 <th>Fecha de corte</th>
                 <th>Persona</th>
                 <th colspan="2">Acciones</th>
@@ -22,9 +23,10 @@
         {% for entity in entities %}
             <tr>
                 <td>{{ item }}</td>
-                <td>{{ entity.modeloprenda.nombre }}</td>
-                <td>{{ entity.cantidad }}</td>
-                <td>{#{ entity.fechacreacion }#}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.tipomodelo.nombre }}</td>
+                <td>{{ entity.cantidadtotal }}</td>
+                <td>{{ entity.fechacreacion | date("d/m/Y") }}</td>
                 <td>{{ entity.persona.nombres }}</td>
                 <td class="action-icon">
                     <a href="{{ path('corteprenda_edit', { 'id': entity.id}) }}" title="Editar registro" >

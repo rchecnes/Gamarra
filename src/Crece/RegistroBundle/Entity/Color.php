@@ -5,12 +5,12 @@ namespace Crece\RegistroBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TipoModelo
+ * Color
  *
- * @ORM\Table(name="tipo_modelo")
+ * @ORM\Table(name="color")
  * @ORM\Entity
  */
-class TipoModelo
+class Color
 {
     /**
      * @var integer
@@ -24,12 +24,12 @@ class TipoModelo
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=120)
+     * @ORM\Column(name="nombre", type="string", length=255)
      */
     private $nombre;
 
     /**
-     * @var text
+     * @var string
      *
      * @ORM\Column(name="descripcion", type="text")
      */
@@ -50,27 +50,22 @@ class TipoModelo
     private $condicion;
 
     /**
-     * @ORM\OneToMany(targetEntity="Crece\RegistroBundle\Entity\ModeloPrenda", mappedBy="tipo_modelo")
+     * @ORM\OneToMany(targetEntity="Crece\RegistroBundle\Entity\CortePrendaDetalle", mappedBy="color")
      */
-    private $corte_prenda;
-
-    public function __toString()
-    {
-        return $this->nombre;
-    }
+     private $corte_prenda_detalle;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->corte_prenda = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->corte_prenda_detalle = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -81,7 +76,7 @@ class TipoModelo
      * Set nombre
      *
      * @param string $nombre
-     * @return TipoModelo
+     * @return Color
      */
     public function setNombre($nombre)
     {
@@ -93,7 +88,7 @@ class TipoModelo
     /**
      * Get nombre
      *
-     * @return string
+     * @return string 
      */
     public function getNombre()
     {
@@ -104,7 +99,7 @@ class TipoModelo
      * Set descripcion
      *
      * @param string $descripcion
-     * @return TipoModelo
+     * @return Color
      */
     public function setDescripcion($descripcion)
     {
@@ -116,7 +111,7 @@ class TipoModelo
     /**
      * Get descripcion
      *
-     * @return string
+     * @return string 
      */
     public function getDescripcion()
     {
@@ -127,7 +122,7 @@ class TipoModelo
      * Set estado
      *
      * @param boolean $estado
-     * @return TipoModelo
+     * @return Color
      */
     public function setEstado($estado)
     {
@@ -139,7 +134,7 @@ class TipoModelo
     /**
      * Get estado
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getEstado()
     {
@@ -150,7 +145,7 @@ class TipoModelo
      * Set condicion
      *
      * @param boolean $condicion
-     * @return TipoModelo
+     * @return Color
      */
     public function setCondicion($condicion)
     {
@@ -162,7 +157,7 @@ class TipoModelo
     /**
      * Get condicion
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getCondicion()
     {
@@ -170,35 +165,35 @@ class TipoModelo
     }
 
     /**
-     * Add corte_prenda
+     * Add corte_prenda_detalle
      *
-     * @param \Crece\RegistroBundle\Entity\ModeloPrenda $cortePrenda
-     * @return TipoModelo
+     * @param \Crece\RegistroBundle\Entity\CortePrendaDetalle $cortePrendaDetalle
+     * @return Color
      */
-    public function addCortePrenda(\Crece\RegistroBundle\Entity\ModeloPrenda $cortePrenda)
+    public function addCortePrendaDetalle(\Crece\RegistroBundle\Entity\CortePrendaDetalle $cortePrendaDetalle)
     {
-        $this->corte_prenda[] = $cortePrenda;
+        $this->corte_prenda_detalle[] = $cortePrendaDetalle;
 
         return $this;
     }
 
     /**
-     * Remove corte_prenda
+     * Remove corte_prenda_detalle
      *
-     * @param \Crece\RegistroBundle\Entity\ModeloPrenda $cortePrenda
+     * @param \Crece\RegistroBundle\Entity\CortePrendaDetalle $cortePrendaDetalle
      */
-    public function removeCortePrenda(\Crece\RegistroBundle\Entity\ModeloPrenda $cortePrenda)
+    public function removeCortePrendaDetalle(\Crece\RegistroBundle\Entity\CortePrendaDetalle $cortePrendaDetalle)
     {
-        $this->corte_prenda->removeElement($cortePrenda);
+        $this->corte_prenda_detalle->removeElement($cortePrendaDetalle);
     }
 
     /**
-     * Get corte_prenda
+     * Get corte_prenda_detalle
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getCortePrenda()
+    public function getCortePrendaDetalle()
     {
-        return $this->corte_prenda;
+        return $this->corte_prenda_detalle;
     }
 }
