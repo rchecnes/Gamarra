@@ -8,9 +8,9 @@
     <!-- Bootstrap 3.3.4 -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <!-- FontAwesome 4.3.0 -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />-->
     <!-- Ionicons 2.0.0 -->
-    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />-->
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/css/Thema/AdminLTE.css') }}" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/Thema/_all-skins.css') }}" />
     <!--datepicker-->
     <link rel="stylesheet" href="{{ asset('assets/css/datepicker3.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 
@@ -73,39 +75,40 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- sidebar menu: : style can be found in sidebar.less -->
+          
           <br><div>
             GRUPO|RITECH
           </div><br>
-          <ul class="sidebar-menu">
+          <!--<ul class="sidebar-menu">
             <li class="treeview active" id="inicio">
               <a href="{{ path('persona') }}">
-                <i class="fa fa-pie-chart"></i>
-                <span>Personas</span>
+                <i class="fa fa-user-plus fa-lg"></i>Personas
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
             <li class="treeview" id="usuario">
               <a href="{{ path('usuario') }}">
-                <i class="fa fa-laptop"></i>
-                <span>Usuarios</span>
+                <i class="fa fa-laptop fa-lg"></i>
+                Usuarios
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
             <li class="treeview" id="document">
               <a href="{{ path('document') }}">
-                <i class="fa fa-laptop"></i>
-                <span>Subir imagen</span>
+                <i class="fa fa-laptop fa-lg"></i>
+                Subir imagen
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
             <li class="treeview" id="prenda">
               <a href="{{ path('usuario') }}">
-                <i class="fa fa-laptop"></i>
-                <span>Administrar Corte de Prendas</span>
+                <i class="fa fa-laptop fa-lg"></i>
+                Administrar Corte de Prendas
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
-          </ul>
+          </ul>-->
+          {{ getMenu() | raw}}
         </section>
         <!-- /.sidebar -->
       </aside>
@@ -141,7 +144,7 @@
 
     <script type="text/javascript">
       if (localStorage.getItem("menu_activo") =='' || localStorage.getItem("menu_activo") == null) {
-          localStorage.setItem("menu_activo", "inicio");
+          localStorage.setItem("menu_activo", "persona");
       };
 
       $(document).ready(function(){

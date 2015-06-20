@@ -37,13 +37,24 @@ label{
 }
 
 .table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
-  border-top: 1px solid #EAE5E5;
+  border: 1px solid rgb(204,204,204);
 }
 
 .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
-  border: 1px solid #EAE5E5;
+
+  border: 1px solid rgb(204,204,204);
 }
 
 .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
-  border-bottom-width: 0px;
+
+  border: 1px solid rgb(204,204,204);
+}
+
+.table thead tr {
+  color: #707070;
+  font-weight: normal;
+  background: #f2f2f2;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(to bottom,#f8f8f8,#ececec););
+  background-repeat: repeat-x;
 }

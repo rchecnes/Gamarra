@@ -1,0 +1,3 @@
+crece_usuario_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CreceUsuarioBundle:Default:index }

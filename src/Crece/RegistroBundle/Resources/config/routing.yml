@@ -4,7 +4,7 @@ crece_registro_document:
 
 crece_registro_persona:
     resource: "@CreceRegistroBundle/Resources/config/routing/persona.yml"
-    prefix:   /
+    prefix:   /persona
 
 crece_registro_usuario:
     resource: "@CreceRegistroBundle/Resources/config/routing/usuario.yml"

@@ -34,7 +34,7 @@
 <dataTypePrecision>4</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
 </Attribute>
-<Attribute name="Fecha" id="63B7BD61-8681-4CBB-D54C-22A103012EBC">
+<Attribute name="FechaModificación" id="63B7BD61-8681-4CBB-D54C-22A103012EBC">
 <createdBy>admin</createdBy>
 <createdTime>2015-05-16 08:02:12 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
@@ -43,17 +43,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
-</Attribute>
-<Attribute name="EmpleadoId" id="9C10499D-0BC2-92B8-F887-CB36E8F66F26">
-<createdBy>admin</createdBy>
-<createdTime>2015-05-16 08:07:22 UTC</createdTime>
-<generatorID>FF86F9C2-8D64-F34D-EC19-A0D1E05815AA</generatorID>
-<ownerDesignName>diseno-gama</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>E1C87F31-C0B6-CD76-032C-E922B52FF3D3</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
 <Attribute name="ModeloId" id="53C73A51-12D8-3EF7-B7D3-9D03919BE257">
 <createdBy>admin</createdBy>
@@ -99,6 +88,27 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="PersonaId" id="4766BEBF-96A5-E689-1ABB-FB49F82ED6D9">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-20 00:37:13 UTC</createdTime>
+<generatorID>58BA81CE-D0A3-C1F9-9943-DFD5B30EE76F</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>25ABAC2B-14D5-A55D-05F9-07B6A7D6072E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="FechaCreacion" id="D6FB6493-7C69-111C-94FC-41E61E21694A">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-20 00:39:06 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

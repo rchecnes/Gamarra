@@ -107,8 +107,19 @@ class Persona
      */
     private $condicion;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Crece\RegistroBundle\Entity\CortePrenda", mappedBy="persona")
+     */
+     private $corte_prenda; 
 
-
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->corte_prenda = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -394,5 +405,38 @@ class Persona
     public function getCondicion()
     {
         return $this->condicion;
+    }
+
+    /**
+     * Add corte_prenda
+     *
+     * @param \Crece\RegistroBundle\Entity\CortePrenda $cortePrenda
+     * @return Persona
+     */
+    public function addCortePrenda(\Crece\RegistroBundle\Entity\CortePrenda $cortePrenda)
+    {
+        $this->corte_prenda[] = $cortePrenda;
+
+        return $this;
+    }
+
+    /**
+     * Remove corte_prenda
+     *
+     * @param \Crece\RegistroBundle\Entity\CortePrenda $cortePrenda
+     */
+    public function removeCortePrenda(\Crece\RegistroBundle\Entity\CortePrenda $cortePrenda)
+    {
+        $this->corte_prenda->removeElement($cortePrenda);
+    }
+
+    /**
+     * Get corte_prenda
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCortePrenda()
+    {
+        return $this->corte_prenda;
     }
 }

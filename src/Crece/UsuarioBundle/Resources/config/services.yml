@@ -1,0 +1,4 @@
+services:
+#    crece_usuario.example:
+#        class: Crece\UsuarioBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -84,3 +84,8 @@ services:
         class: Crece\RegistroBundle\Twig\TwigExtension
         tags:
             - { name: twig.extension }
+
+    Crece.twig.usuario_extension:
+        class: Crece\UsuarioBundle\Twig\TwigExtension
+        tags:
+            - { name: twig.extension }

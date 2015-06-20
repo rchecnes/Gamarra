@@ -31,9 +31,23 @@ class CortePrenda
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecha", type="date")
+     * @ORM\Column(name="fecha_creacion", type="date")
      */
-    private $fecha;
+    private $fecha_creacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_modificación", type="date")
+     */
+    private $fecha_modificación;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Ano", type="string", length=4)
+     */
+    private $ano;
 
     /**
      * @var boolean
@@ -50,22 +64,17 @@ class CortePrenda
     private $condicion;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Ano", type="string", length=4)
+     * @ORM\ManyToOne(targetEntity="Crece\RegistroBundle\Entity\Persona", inversedBy="corte_prenda")
+     * @ORM\JoinColumn(name="persona_id", referencedColumnName="id")
      */
-    private $ano;
+    protected $persona;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Crece\RegistroBundle\Entity\Empleado", inversedBy="corteprenda")
-     * @ORM\JoinColumn(name="empleado_id", referencedColumnName="id")
-     */
-    protected $category;
+    
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -88,7 +97,7 @@ class CortePrenda
     /**
      * Get cantidad
      *
-     * @return integer
+     * @return integer 
      */
     public function getCantidad()
     {
@@ -96,26 +105,72 @@ class CortePrenda
     }
 
     /**
-     * Set fecha
+     * Set fecha_creacion
      *
-     * @param \DateTime $fecha
+     * @param \DateTime $fechaCreacion
      * @return CortePrenda
      */
-    public function setFecha($fecha)
+    public function setFechaCreacion($fechaCreacion)
     {
-        $this->fecha = $fecha;
+        $this->fecha_creacion = $fechaCreacion;
 
         return $this;
     }
 
     /**
-     * Get fecha
+     * Get fecha_creacion
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
-    public function getFecha()
+    public function getFechaCreacion()
     {
-        return $this->fecha;
+        return $this->fecha_creacion;
+    }
+
+    /**
+     * Set fecha_modificación
+     *
+     * @param \DateTime $fechaModificación
+     * @return CortePrenda
+     */
+    public function setFechaModificación($fechaModificación)
+    {
+        $this->fecha_modificación = $fechaModificación;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha_modificación
+     *
+     * @return \DateTime 
+     */
+    public function getFechaModificación()
+    {
+        return $this->fecha_modificación;
+    }
+
+    /**
+     * Set ano
+     *
+     * @param string $ano
+     * @return CortePrenda
+     */
+    public function setAno($ano)
+    {
+        $this->ano = $ano;
+
+        return $this;
+    }
+
+    /**
+     * Get ano
+     *
+     * @return string 
+     */
+    public function getAno()
+    {
+        return $this->ano;
     }
 
     /**
@@ -134,7 +189,7 @@ class CortePrenda
     /**
      * Get estado
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getEstado()
     {
@@ -157,7 +212,7 @@ class CortePrenda
     /**
      * Get condicion
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getCondicion()
     {
@@ -165,48 +220,25 @@ class CortePrenda
     }
 
     /**
-     * Set ano
+     * Set persona
      *
-     * @param string $ano
+     * @param \Crece\RegistroBundle\Entity\Persona $persona
      * @return CortePrenda
      */
-    public function setAno($ano)
+    public function setPersona(\Crece\RegistroBundle\Entity\Persona $persona = null)
     {
-        $this->ano = $ano;
+        $this->persona = $persona;
 
         return $this;
     }
 
     /**
-     * Get ano
+     * Get persona
      *
-     * @return string
+     * @return \Crece\RegistroBundle\Entity\Persona 
      */
-    public function getAno()
+    public function getPersona()
     {
-        return $this->ano;
-    }
-
-    /**
-     * Set category
-     *
-     * @param \Crece\RegistroBundle\Entity\Empleado $category
-     * @return CortePrenda
-     */
-    public function setCategory(\Crece\RegistroBundle\Entity\Empleado $category = null)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \Crece\RegistroBundle\Entity\Empleado 
-     */
-    public function getCategory()
-    {
-        return $this->category;
+        return $this->persona;
     }
 }

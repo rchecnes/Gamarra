@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C09DC965-FEBC-96A1-DE28-7CAC811DFAD3" name="Menu">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:07:54 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="MenuId" id="5457AD36-6D1A-85AB-3567-F887EB7579D2">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:08:43 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Nombre" id="BD1F0E9C-0612-B56F-09C6-DD476470FAFD">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:09:02 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="ruta" id="25DB9692-DEED-2787-0C35-6C4EF15B2224">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:09:15 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="nivel" id="6C12A671-D782-D032-1ED1-893DA0413B4C">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:09:46 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Padre" id="A4FC5BC7-185A-B901-FDF1-D3AC9DC13D83">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:13:27 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2A370F05-551E-F6EF-CD1A-8AE1BA0FCB75" name="Menu PK">
+<createdBy>Intimedia7</createdBy>
+<createdTime>2015-06-19 23:09:01 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>diseno-gama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5457AD36-6D1A-85AB-3567-F887EB7579D2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
