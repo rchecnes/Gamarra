@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             //new AppBundle\AppBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Oneup\UploaderBundle\OneupUploaderBundle(),
+            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
 
             new Crece\RegistroBundle\CreceRegistroBundle(),
             new Crece\UsuarioBundle\CreceUsuarioBundle(),

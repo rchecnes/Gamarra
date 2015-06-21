@@ -40,6 +40,22 @@ class CortePrendaType extends AbstractType
                 },
                 'required' => true,
             ))
+            ->add('corte_prenda_detalle','collection', array(
+                'type'              => new CortePrendaDetalleType(),
+                'label'             => 'Colores',
+                'attr'              => array('class' => 'collection'),
+                'allow_add'         => true,
+                //'allow_delete'      => true,
+                //'prototype'         => true,
+                //'widget_add_btn'    => array('label' => "Agregar color", 'attr' => array('class' => 'btn btn-primary btn-small', 'id' =>'btn_add_aco_taller_acompanante_x_facilitador')),
+                //'show_legend'       => false, // dont show another legend of subform
+                //'widget_control_group' => true,
+                //'show_legend'       => true,
+                'options'           => array( // options for collection fields
+                                        'label_render' => false,
+                                        'widget_remove_btn'     => array('label' => "Borrar", 'attr' => array('class' => 'btn btn-danger btn-small btn-inti-eliminar inti-margin-top-25'))
+                )
+            ))
             ->add('tipo_modelo', 'entity', array(
                 'attr'          => array('class' => 'form-control input-sm'),
                 'class'         => 'CreceRegistroBundle:TipoModelo',
