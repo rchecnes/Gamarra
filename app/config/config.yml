@@ -78,7 +78,6 @@ oneup_uploader:
         gallery:
             frontend: blueimp # or any uploader you use in the frontend
 
-
 services:
     Crece.twig.registro_extension:
         class: Crece\RegistroBundle\Twig\TwigExtension
@@ -89,3 +88,10 @@ services:
         class: Crece\UsuarioBundle\Twig\TwigExtension
         tags:
             - { name: twig.extension }
+
+mopa_bootstrap:
+    form:
+        show_legend: false # default is true
+        show_child_legend: false # default is true
+        error_type: block # or inline which is default
+        checkbox_label: 'label' # default is both (label|widget|both)

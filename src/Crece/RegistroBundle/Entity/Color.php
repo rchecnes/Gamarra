@@ -62,6 +62,11 @@ class Color
         $this->corte_prenda_detalle = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->nombre;
+    }
+
     /**
      * Get id
      *
